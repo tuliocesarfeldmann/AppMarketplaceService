@@ -15,8 +15,9 @@ public class Offer extends AppEntityAbstract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column
-    private String category;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
     @Column
     private String title;
     @Column

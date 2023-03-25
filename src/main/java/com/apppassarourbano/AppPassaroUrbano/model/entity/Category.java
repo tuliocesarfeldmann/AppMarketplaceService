@@ -17,10 +17,13 @@ public class Category extends AppEntityAbstract {
     private Long id;
 
     @Column
-    private String title;
+    private String name;
 
     @Column
-    private String name;
+    private String description;
+
+    @Column
+    private String path;
 
     @Column
     private LocalDateTime createdAt;

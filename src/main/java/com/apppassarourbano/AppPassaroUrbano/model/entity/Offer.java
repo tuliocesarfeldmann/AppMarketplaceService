@@ -41,4 +41,9 @@ public class Offer extends AppEntityAbstract {
     void prePersist(){
         this.advertiser = Utils.getCurrentUser();
     }
+
+    @PreUpdate
+    void preUpdate(){
+        this.advertiser = Utils.getCurrentUser();
+    }
 }

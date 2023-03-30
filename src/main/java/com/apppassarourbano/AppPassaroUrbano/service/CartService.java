@@ -11,6 +11,6 @@ import java.util.Map;
 public class CartService extends AppServiceAbstract<Long, CartItem, CartRepository> {
     @Override
     public void beforeList(Map<String, String> params){
-        params.put("user_id", Utils.getCurrentUser().getId().toString());
+        params.put("user.id", Utils.getCurrentUser().getId().toString());
     }
 }

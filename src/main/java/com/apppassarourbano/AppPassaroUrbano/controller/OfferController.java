@@ -20,7 +20,7 @@ public class OfferController extends AppRestAbstract<Long, Offer, OfferService> 
     @GetMapping("/my-offers")
     public ResponseEntity<?> myOffers(){
         Map<String,String> map = new HashMap<>();
-        map.put("advertiser", String.valueOf(Utils.getCurrentUser().getId()));
+        map.put("advertiser.id", String.valueOf(Utils.getCurrentUser().getId()));
 
         return ResponseEntity.ok(offerService.list(map));
     }

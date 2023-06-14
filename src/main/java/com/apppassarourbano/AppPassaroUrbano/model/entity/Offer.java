@@ -15,22 +15,30 @@ public class Offer extends AppEntityAbstract {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
     @Column
     private String title;
+
     @Column
     private String description;
+
     @ManyToOne
     @JoinColumn(name = "advertiser")
     private User advertiser;
+
     @Column
     private Double value;
+
     @Column
     private String details;
+
     @Column
     private String location;
+
     @Column
     private Boolean contraste;
     @OneToMany(mappedBy = "offer", cascade = CascadeType.ALL)
